@@ -36,4 +36,4 @@ jobs:
 
     - name: Upload to S3
       run: |
-        aws s3 cp target/gha-demo-1.0.jar s3://github-actions-build-artifact/gha-demo.jar
+        aws s3 cp target/*.jar s3://github-actions-build-artifact/
