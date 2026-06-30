@@ -5,7 +5,7 @@ public class App {
         System.out.println("Hello from GitHub Actions!");
     }
 
-    public static int add(int a, int b) {\
+    public static int add(int a, int b) {
         int x;
         return a + b;
     }
