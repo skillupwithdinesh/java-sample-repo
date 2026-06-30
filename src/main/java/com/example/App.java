@@ -6,7 +6,7 @@ public class App {
     }
 
     public static int add(int a, int b) {
-        int x;
+        int x, y;
         return a + b;
     }
 }
