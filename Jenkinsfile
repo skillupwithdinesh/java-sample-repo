@@ -1,16 +1,18 @@
 pipeline{
     agent any
+    tools {
+        maven 'Maven3.9'
+    }
     stages{
-        stage('Hello World from GitHub'){
+        stage('Git Checkout'){
         steps{
-            echo "Hello from pipeline!"
+            git branch: 'main', credentialsId: 'GithubCredential', url: 'https://github.com/skillupwithdinesh/java-sample-repo.git'
         }
         }
         
-        stage('Bye World'){
+        stage('Maven Build'){
             steps{
-                echo "Bye from pipeline"
-                sh "ls -l"
+                sh "mvn clean install"
             }
         }
         
